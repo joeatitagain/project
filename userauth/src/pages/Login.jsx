@@ -17,7 +17,7 @@ function Login () {
 
     return(
         <>
-            <div className="bg-[#0f0824] h-screen flex justify-center py-10 items-center">
+            <div className="bg-[#0f0824] h-screen grid justify-center py-10 items-center">
                 <div className='bg-white p-10 w-l h-fit flex flex-col gap-4 rounded-3xl'>
                     <div className='w-2xs '>
                         <img className='w-full' src={img} alt="" />
@@ -70,9 +70,12 @@ function Login () {
 
                                 </div>
                             </fieldset>
-                            <Themebtn text={'Sign Up'} type='submit'/>
+                            <Themebtn text={'Login'} type='submit'/>
                         </form>
                     </div>
+                </div>
+                <div>
+                    <p className='text-white'>Don't have an account? <a href="/signup"className='text-[#f4b328]'>Sign Up</a></p>
                 </div>
             </div>  
         </>
