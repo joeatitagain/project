@@ -8,6 +8,10 @@ function Signup () {
     const [showPassword, setShowPassword] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
 
+    useEffect (() => {
+        document.title = 'Sign Up'
+    })
+
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
@@ -34,13 +38,13 @@ function Signup () {
 
     return(
         <>
-            <div className="bg-[#0f0824] h-screen flex justify-center py-10 ">
+            <div className="bg-[#0f0824] h-screen grid justify-center py-10 ">
                 <div className='bg-white p-10 w-l flex flex-col gap-4 rounded-3xl'>
                     <div className='w-2xs '>
                         <img className='w-full' src={img} alt="" />
                     </div>
                     <div>
-                        <span className='text-2xl font-bold subpixel-antialiased text-[#0f0824]'>Get Started</span>
+                        <span className='text-2xl font-bold subpixel-antialiased text-blue-950'>Get Started</span>
                     </div>
                     <div>
                         <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
@@ -112,9 +116,12 @@ function Signup () {
 
                                 </div>
                             </fieldset>
-                            <Themebtn text={'Sign Up'} type='submit' className='my-3'/>
+                            <Themebtn text={'Sign Up'} type='submit'/>
                         </form>
                     </div>
+                </div>
+                <div>
+                    <p className='text-white'>Already have an account? <a href="login" className='text-[#f4b328]'>Login</a></p>
                 </div>
             </div>  
         </>
